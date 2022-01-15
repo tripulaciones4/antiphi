@@ -4,6 +4,7 @@ from scipy.io import arff
 import re
 
 def getProcessedDataFrame(filepath):
+  '''Get dataframe processed'''
   dataset = arff.loadarff(filepath)
   df = pd.DataFrame(dataset[0])
   str_df = df.select_dtypes([np.object]) 
@@ -14,6 +15,7 @@ def getProcessedDataFrame(filepath):
   return str_df
 
 def convertEncodingToPositive(dataframe):
+  '''Convert negative numbers to positive numbers'''
 
   mapping = {-1: 2, 0: 0, 1: 1}
 
