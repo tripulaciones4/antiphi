@@ -62,3 +62,13 @@ def arroba(url):
   else:
       n=1
   return n
+
+def longitud(url):
+  '''Long URL'''
+  if len(url) < 54 :
+    n=0
+  elif len(url) >= 54 and len(url) <= 75:
+    n=1
+  elif len(url) >= 75 :
+    n=2
+  return n
